@@ -1,14 +1,19 @@
 # Author: Rene Kabanda
-# Ubuntu aliases
 
 # Terminal
 alias e='exit'
 alias t='tmux'
 alias c='clear'
 
+# Network monitoring
+alias signal='nmcli device wifi list'
+
 # Tools
 alias h='htop'
 alias g='glances'
+alias wtr='curl wttr.in'
+alias st='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+alias n='watch -n 1 nvidia-smi'
 
 # APT package manager   
 alias update='sudo apt update'
@@ -29,8 +34,25 @@ alias dcu='docker compose up -d'
 alias dcd='docker compose down'
 alias drmi='docker rmi'
 alias stop='docker stop'
+alias restart='docker restart'
+alias all='docker stop $(docker ps -a -q)'
 alias start='docker start'
 alias drm='docker rm'
+alias dvl='docker volume ls'
+alias dnl='docker network ls'
+alias dnr='docker network remove'
+alias dvr='docker volume remove'
+alias dsp='docker system prune'
 
 # Kubernetes
 alias k='kubectl'
+
+# Terraform
+alias tf='terraform'
+
+# EKS
+alias eks='eksctl'
+alias ecc='eksctl create cluster'
+
+# Virt Manager
+alias virt='sudo virt-manager'
